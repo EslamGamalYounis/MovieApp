@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".showMovies.DetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/MovieMainTitle"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:background="#DA00967F"
+                android:paddingLeft="20dp"
+                android:paddingTop="40dp"
+                android:text="details"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_movie_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+
+            <Button
+                android:id="@+id/bu_favourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="190dp"
+                android:layout_marginTop="100dp"
+                android:background="#F44336"
+                android:text="favourite" />
+
+            <TextView
+                android:id="@+id/vote_average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="190dp"
+                android:layout_marginTop="65dp"
+                android:text="vote avreage"
+                android:textSize="28dp" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@android:color/holo_blue_dark" />
+
+            <TextView
+                android:id="@+id/date_of_release"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="190dp"
+                android:layout_marginTop="25dp"
+                android:text="date of realease"
+                android:textSize="28dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_movie_overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/overview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="8dp"
+                    android:text="overview" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/card_movie_overview"
+            android:background="@android:color/black" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/trailrs_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_movie_overview"
+            android:layout_marginTop="10dp"
+            android:background="#fff"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/trailers_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Trailers:"
+                    android:textSize="28dp"
+                    android:paddingLeft="8dp"
+                    />
+
+                <Button
+                    android:id="@+id/trailers_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="#fff"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Go to Trailers"
+                    android:textColor="#1A237E"
+                    android:textSize="30dp"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
